@@ -1,22 +1,45 @@
 {
   "connections": [
-
     {
       "connection_id": "sqlserver-northwind",
       "connection_name": "SQL Server Northwind",
-      "database_type": 1,
+      "database_type": "SQLServer",
       "connection_string": "Server=localhost;Database=Northwind;User Id=sa;Password=Password123!;TrustServerCertificate=True;",
+      "schema_name": null,
       "max_connections": 15,
       "connection_timeout": 30,
       "command_timeout": 120,
       "read_only": true,
       "semantic_model_path": "./semantic_models/northwind.yaml",
       "metadata_cache_duration": 3600,
-      "tags": ["sample", "northwind"],
+      "tags": [
+        "sample",
+        "northwind"
+      ],
       "description": "Microsoft SQL Server Northwind sample database",
       "created_by": "developer",
-      "created_at": "2023-06-02T11:30:00Z",
-      "updated_at": "2023-06-02T11:30:00Z"
+      "created_at": "2023-06-02T14:30:00+03:00",
+      "updated_at": "2023-06-02T14:30:00+03:00"
+    },
+    {
+      "connection_id": "DDSDB_Dev",
+      "connection_name": "DDSDB_Dev",
+      "database_type": "sqlserver",
+      "connection_string": "Server=SVDRBIDW01;Database=DDSDB_Dev;User Id=ETBIWHUser;Password=4152@Asdfgh;MultipleActiveResultSets=true;TrustServerCertificate=true",
+      "schema_name": "dbo",
+      "max_connections": 10,
+      "connection_timeout": 120,
+      "command_timeout": 120,
+      "read_only": true,
+      "semantic_model_path": "string",
+      "metadata_cache_duration": 0,
+      "tags": [
+        "string"
+      ],
+      "description": "string",
+      "created_by": "string",
+      "created_at": "2025-06-04T06:54:21.244Z",
+      "updated_at": "2025-06-04T06:54:21.244Z"
     }
   ]
 }

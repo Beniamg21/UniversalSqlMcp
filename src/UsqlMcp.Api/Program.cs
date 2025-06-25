@@ -14,13 +14,13 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "UsqlMcp API",
+        Title = "Ethiopian Airlines BI team Mcp API",
         Version = "v1",
         Description = "API for Universal SQL Multi-Connection Platform",
         Contact = new Microsoft.OpenApi.Models.OpenApiContact
         {
             Name = "UsqlMcp Team",
-            Email = "support@usqlmcp.example.com"
+            Email = "beniang@ethiopianairlines.com"
         }
     });
     
@@ -40,15 +40,15 @@ builder.Services.AddLogging();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "UsqlMcp API v1");
         c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
     });
-}
+//}
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
@@ -62,7 +62,4 @@ UsqlMcp.Infrastructure.DependencyInjection.CopySqlScriptsToOutputDirectory(
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+
